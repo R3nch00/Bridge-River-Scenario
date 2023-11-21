@@ -50,3 +50,18 @@ void updateTruck(int value){ //5
 GLfloat boatPosition = 0.0f;
 GLfloat boatSpeed = 0.02f;
 
+void updateBoat(int value){
+    if(boatPosition > 1.45){ boatPosition = 0; }
+    boatPosition += boatSpeed;
+	glutPostRedisplay();
+	glutTimerFunc(100, updateBoat, 0);
+}
+
+GLfloat carPosition = 0.0f;
+GLfloat carSpeed = 0.05f;
+void updateCar(int value){ //car utso
+    if(carPosition < - 1.0){ carPosition = 0.6f; }
+    carPosition -= carSpeed;
+    glutPostRedisplay();
+    glutTimerFunc(100, updateCar, 0);
+}
