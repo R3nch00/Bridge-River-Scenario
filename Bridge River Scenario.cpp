@@ -65,3 +65,42 @@ void updateCar(int value){ //car utso
     glutPostRedisplay();
     glutTimerFunc(100, updateCar, 0);
 }
+
+void bridgeCar1(int val){ //Car body
+    glPushMatrix();
+    glTranslatef(positionBridgeCar1,0.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glColor3f(1.0f, .0f, 0.0f);
+    glVertex2f(-0.1f, 0.3f);
+    glVertex2f(0.4f, 0.3f);
+    glVertex2f(0.5f, 0.2f);
+    glVertex2f(0.7f, 0.2f);
+    glVertex2f(0.7f, 0.0f);
+    glVertex2f(-0.3f, 0.0f);
+    glVertex2f(-0.3f, 0.2f);
+    glVertex2f(-0.2f, 0.2f);
+glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glVertex2f(0.1f, 0.28f);
+    glVertex2f(0.4f, 0.28f);
+    glVertex2f(0.45f, 0.22f);
+    glVertex2f(0.1f, 0.22f);
+glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glVertex2f(-0.1f, 0.28f);
+    glVertex2f(0.05f, 0.28f);
+    glVertex2f(0.05f, 0.22f);
+    glVertex2f(-0.15f, 0.22f);
+glEnd();
+
+    glBegin(GL_POLYGON); //Tube light
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glVertex2f(0.6f, 0.15f);
+    glVertex2f(0.7f, 0.15f);
+    glVertex2f(0.7f, 0.1f);
+    glVertex2f(0.6f, 0.1f);
+glEnd();
