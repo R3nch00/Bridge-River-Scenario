@@ -104,3 +104,36 @@ glEnd();
     glVertex2f(0.7f, 0.1f);
     glVertex2f(0.6f, 0.1f);
 glEnd();
+
+    float t1_angle; //Tire 1
+    float t1_radius=0.1;
+    float t1_x,t1_y,t1_p,t1_q;
+    
+    t1_x = -0.1f; t1_y = 0.0f;
+    
+    glBegin(GL_POLYGON);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2f(t1_x, t1_y);
+    for(t1_angle = 0.0f; t1_angle<360.0f; t1_angle++){
+        t1_p = t1_x+sin(t1_angle)*t1_radius;
+        t1_q = t1_y+cos(t1_angle)*t1_radius;
+        glVertex2f(t1_p,t1_q);
+    }
+glEnd();
+
+    float i1_angle;// Tire 1 Inside
+    float i1_radius = 0.07;
+    float i1_x,i1_y, i1_p, i1_q;
+
+    i1_x = -0.1f; i1_y = 0.0f;
+
+    glBegin(GL_POLYGON);
+    glColor3f(1.0f, 1.0f, 1.0f);
+
+    glVertex2f(i1_x,i1_y);
+    for(i1_angle = 0.0f; i1_angle<360.0f; i1_angle++){
+        i1_p = i1_x+sin(i1_angle)*i1_radius;
+        i1_q = i1_y+cos(i1_angle)*i1_radius;
+        glVertex2f(i1_p,i1_q);
+    }
+glEnd();
