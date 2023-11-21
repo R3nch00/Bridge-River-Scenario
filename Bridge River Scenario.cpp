@@ -171,3 +171,14 @@ glEnd();
         glVertex2f(i2_p,i2_q);
     }
 glEnd();
+
+    if(val == 9){
+        glBegin(GL_TRIANGLES); //light
+        glColor3f(1.0f,1.f,0.0f);
+        glVertex2f(0.95f,  0.2f);
+        glVertex2f(0.69f,  0.12f);
+        glVertex2f(0.95f,  -0.03f);
+    glEnd();
+   }
+    glPopMatrix();
+}
