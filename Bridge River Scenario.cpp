@@ -182,3 +182,14 @@ glEnd();
    }
     glPopMatrix();
 }
+
+void circleSolid(float x, float y, float radius){
+	int triangleAmount = 100; //# of triangles used to draw circle
+	GLfloat twicePi = 2.0f * PI;
+	glBegin(GL_TRIANGLE_FAN);
+    glVertex2f(x, y); // center of circle
+    for(int i = 0; i <= triangleAmount; i++){
+        glVertex2f(x + (radius * cos(i *  twicePi / triangleAmount)), y + (radius * sin(i * twicePi / triangleAmount)));
+    }
+    glEnd();
+}
