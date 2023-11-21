@@ -21,7 +21,6 @@ int rval = 0;
 char play = '1';
 
 void initGL(){ glClearColor(0.0f, 0.0f, 0.0f, 1.0f); } // Black and opaque
-
 void Idle(){ glutPostRedisplay(); } // marks the current window as needing to be redisplayed
 
 void automated_mor(int val){ glutDisplayFunc(displayMor); }
@@ -187,9 +186,63 @@ void circleSolid(float x, float y, float radius){
 	int triangleAmount = 100; //# of triangles used to draw circle
 	GLfloat twicePi = 2.0f * PI;
 	glBegin(GL_TRIANGLE_FAN);
-    glVertex2f(x, y); // center of circle
+    	glVertex2f(x, y); // center of circle
+	
     for(int i = 0; i <= triangleAmount; i++){
         glVertex2f(x + (radius * cos(i *  twicePi / triangleAmount)), y + (radius * sin(i * twicePi / triangleAmount)));
     }
     glEnd();
 }
+
+void vehicleTruck(int val){//Truck
+    glPushMatrix();
+    glTranslatef(truckPosition,0.0f, 0.0f);
+
+   //B O D Y
+   
+    glColor3ub(0,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2f(-0.9f,-0.86f);
+    glVertex2f(-0.68f, -0.86f);
+    glVertex2f(-0.68f,-0.67f);
+    glVertex2f(-0.9f,-0.67f);
+    glEnd();
+
+    //Truck Base
+    
+    glColor3ub(0,0,0);
+    glBegin(GL_POLYGON);
+    glVertex2f(-0.9f,-0.86f);
+    glVertex2f(-0.58f, -0.86f);
+    glVertex2f(-0.58f,-0.9f);
+    glVertex2f(-0.9f,-0.9f);
+    glEnd();
+
+    //Truck Front
+    
+    glColor3ub(240,0,0);
+    glBegin(GL_POLYGON);
+    glVertex2f(-0.67f,-0.86f);
+    glVertex2f(-0.58f, -0.86f);
+    glVertex2f(-0.58f,-0.79f);
+    glVertex2f(-0.61f,-0.735f);
+    glVertex2f(-0.67f,-0.735f);
+    glEnd();
+
+    //Wheels
+    
+    glColor3ub(20,20,120);
+    circleSolid(-0.84f,-0.88f,0.034);
+    circleSolid(-0.64f,-0.88f,0.034);
+    glColor3ub(130,130,130);
+    circleSolid(-0.84f,-0.88f,0.02);
+    circleSolid(-0.64f,-0.88f,0.02);
+
+    //Door
+    
+    glColor3ub(0,0,0);
+    glLineWidth(5.0);
+    glBegin(GL_LINES);
+    glVertex2f(-.59619,-0.815);
+    glVertex2f(-0.61,-0.815);
+    glEnd();
