@@ -303,3 +303,23 @@ void vehicleCar(int val){// Car part
     glVertex2f(0.141f,-0.842f);
     glEnd();
     
+
+    //W I N D O W
+
+    glColor3ub(153,206,250);
+    glBegin(GL_POLYGON);
+    glVertex2f(0.071,-0.842);
+    glVertex2f(0.132,-0.842);
+    glColor3ub(100,149,237);
+    glVertex2f(0.132,-0.77);
+    glVertex2f(0.106,-0.77);
+    glEnd();
+
+    glColor3ub(153,206,250);
+    glBegin(GL_POLYGON);
+    glVertex2f(0.148,-0.842);
+    glVertex2f(0.206,-0.842);
+    glColor3ub(100,149,237);
+    glVertex2f(0.173,-0.77);
+    glVertex2f(0.148,-0.77);
+    glEnd();
