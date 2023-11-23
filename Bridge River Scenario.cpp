@@ -452,3 +452,12 @@ void cloud(int val){ // C L O U D 2
 	
 	glPopMatrix();
 }
+
+// W I N D M I L L
+
+int frameNumber = 0; 
+void doFrame(int v){ // W I N D M I L L Rotate
+    frameNumber++;
+    glutPostRedisplay();
+    glutTimerFunc(30,doFrame,0);
+}
