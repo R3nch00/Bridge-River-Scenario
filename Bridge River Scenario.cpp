@@ -382,6 +382,32 @@ void boat(int vehicle){ // B O A T
     glVertex2f(-0.645,-0.24);
     glVertex2f(-0.580,-0.24);
     glEnd();
-
+	
+void cloud2(int value){
+    if(position1>1.0) 
+        position1 = -1.0f;
+        position1 += speed;
+	
+	glutPostRedisplay();
+	glutTimerFunc(100, cloud2, 0);
+}
     glPopMatrix();
+}
+
+void sun(int sval){
+	x=-0.8f; y=0.85f; radius =0.1f;
+	triangleAmount = 50;
+	twicePi = 2.0f * PI;
+	if(sval==1) glColor3ub(255, 224, 102);
+    if(sval==8) glColor3ub(226, 148, 13);
+    
+	glBegin(GL_TRIANGLE_FAN);
+		glVertex2f(x, y);
+		for(int i = 0; i <= triangleAmount;i++){
+			glVertex2f(
+                x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
 }
