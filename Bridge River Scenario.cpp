@@ -411,3 +411,44 @@ void sun(int sval){
 		}
 	glEnd();
 }
+
+void cloud(int val){ // C L O U D 2
+    
+    glPushMatrix();
+	glTranslatef(position1,0.0f, 0.0f);
+	x=0.0f; y=0.9f; radius =.1f;
+	triangleAmount = 50;
+	twicePi = 2.0f * PI;
+
+	if(val==1) glColor3ub(255, 255, 255);
+    if(val==9) glColor3ub(110, 113, 115);
+
+	glBegin(GL_TRIANGLE_FAN);
+		glVertex2f(x, y);
+		for(int i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+                x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	x=-0.1f; y=0.9f; radius =.07f;
+	triangleAmount = 50;
+	twicePi = 2.0f * PI;
+
+	if(val==1) glColor3ub(255, 255, 255);
+    if(val==9) glColor3ub(110, 113, 115);
+        
+	glBegin(GL_TRIANGLE_FAN);
+		glVertex2f(x, y);
+		for(int i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+                x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+	
+	glPopMatrix();
+}
