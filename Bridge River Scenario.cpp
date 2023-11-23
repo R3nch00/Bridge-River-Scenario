@@ -346,3 +346,42 @@ void vehicleCar(int val){// Car part
     }
     glPopMatrix();
 }
+
+void boat(int vehicle){ // B O A T 
+    glPushMatrix();
+    glTranslatef(boatPosition,0.0f, 0.0f);
+    if (vehicle == 1)
+        glColor3ub(255,110,0);
+    if (vehicle == 2)
+        glColor3ub(0,0,0);
+    glBegin(GL_POLYGON);
+    glVertex2f(-0.69f, -0.30f);
+    glVertex2f(-0.62f, -0.30f);
+    glVertex2f(-0.58f, -0.24f);
+    glVertex2f(-0.73f, -0.24f);
+    glEnd();
+
+    // S T I C K 
+    glColor3ub(160,82,35);
+    glLineWidth(3);
+    glBegin(GL_LINES);
+    glVertex2f(-0.65,-0.24);
+    glVertex2f(-0.65,-0.1);
+    glEnd();
+
+    glColor3ub(0,255,0);
+    glBegin(GL_TRIANGLES);
+    glVertex2f(-0.655,-0.13);
+    glVertex2f(-0.655,-0.24);
+    glVertex2f(-0.71,-0.24);
+    glEnd();
+
+    glColor3ub(255,0,0);
+    glBegin(GL_TRIANGLES);
+    glVertex2f(-0.645,-0.13);
+    glVertex2f(-0.645,-0.24);
+    glVertex2f(-0.580,-0.24);
+    glEnd();
+
+    glPopMatrix();
+}
