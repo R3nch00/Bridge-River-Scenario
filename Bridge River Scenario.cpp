@@ -323,3 +323,26 @@ void vehicleCar(int val){// Car part
     glVertex2f(0.173,-0.77);
     glVertex2f(0.148,-0.77);
     glEnd();
+
+    // D O O R
+    
+    glColor3ub(0,0,0);
+    glLineWidth(5.0);
+    glBegin(GL_LINES);
+    glVertex2f(0.11,-0.863);
+    glVertex2f(0.13,-0.863);
+    glVertex2f(0.186,-0.863);
+    glVertex2f(0.206,-0.863);
+    glColor3ub(255,255,255);
+    glEnd();
+
+    if(val == 9){
+    glBegin(GL_TRIANGLES); // L I G H T
+      glColor3f(1.0f,1.f,0.0f);
+      glVertex2f(-0.15f, -0.84f);
+      glVertex2f(-0.15f,  -0.93f);
+      glVertex2f(0.018f, -0.90f);
+    glEnd();
+    }
+    glPopMatrix();
+}
