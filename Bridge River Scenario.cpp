@@ -246,3 +246,25 @@ void vehicleTruck(int val){//Truck
     glVertex2f(-.59619,-0.815);
     glVertex2f(-0.61,-0.815);
     glEnd();
+
+   //window
+    glColor3ub(153,206,250);
+    glBegin(GL_POLYGON);
+    glVertex2f(-0.66,-0.797);
+    glVertex2f(-0.596,-0.797);
+    glVertex2f(-0.596,-0.781);
+    glColor3ub(100,149,237);
+    glVertex2f(-0.615,-0.747);
+    glVertex2f(-0.66,-0.747);
+    glEnd();
+
+    if(val == 9){
+    glBegin(GL_TRIANGLES); //light
+      glColor3f(1.0f,1.f,0.0f);
+      glVertex2f(-0.4f, -0.9f);
+      glVertex2f(-0.4f,  -0.8f);
+      glVertex2f(-0.58f, -0.85f);
+    glEnd();
+    }
+    glPopMatrix();
+}
