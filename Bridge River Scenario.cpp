@@ -549,3 +549,34 @@ void sky(int val){ // C H A N G E C O L O R
         glColor3ub(235, 158, 59);
         glVertex2f(-1.0f, 0.5f);
     }
+
+    if(val==8){
+        glColor3ub(193, 214, 58);
+        glVertex2f(-1.0f, 1.0f);
+
+        glColor3ub(214, 170, 24);
+        glVertex2f( 1.0f, 1.0f);
+
+        glColor3ub(27, 191, 164);
+        glVertex2f( 1.0f, 0.5f);
+
+        glColor3ub(94, 190, 209);
+        glVertex2f(-1.0f, 0.5f);
+}
+
+    if(val==9){
+        glColor3ub(28,142,255);
+        glVertex2f(-1.0f, 1.0f);
+
+        glColor3ub(18,8,54);
+        glVertex2f( 1.0f, 1.0f);
+
+        glColor3ub(18,8,54);
+        glVertex2f( 1.0f, 0.5f);
+
+        glColor3ub(18,8,54);
+        glVertex2f(-1.0f, 0.5f);
+    }
+
+    glEnd();
+}
