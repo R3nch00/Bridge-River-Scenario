@@ -513,3 +513,19 @@ void hill3rd(int val){
 
     glEnd();
 
+    glBegin(GL_POLYGON);  // Third right shadow of H I L L
+
+    if(val==1) glColor3f(0.0f, 0.7f, 0.0f);
+    if(val==9) glColor3f(0.0f, 0.52f, 0.0f);
+
+        glVertex2f(0.35f, 0.4f);
+        glVertex2f(0.45f, 0.5f);
+        glVertex2f(0.77f, 0.61f);
+        glVertex2f(0.6f, 0.58f);
+        glVertex2f(0.5f, 0.56f);
+        glVertex2f(0.55f, 0.5f);
+        glVertex2f(0.57f, 0.45f);
+        glVertex2f(0.59f, 0.4f);
+
+    glEnd();
+}
