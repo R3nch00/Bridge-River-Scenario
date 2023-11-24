@@ -580,3 +580,22 @@ void sky(int val){ // C H A N G E C O L O R
 
     glEnd();
 }
+
+void windmill(int val){ // Change Windmill
+    int i;
+    
+    if(val==1) glColor3f(0.8f, 0.8f, 0.9f);
+    if(val==9) glColor3f(0.40f, 0.45f, 0.53f);
+
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.05f, 0);
+	glVertex2f(0.05f, 0);
+	glVertex2f(0.05f, 3);
+	glVertex2f(-0.05f, 3);
+	glEnd();
+	
+	glTranslatef(0, 3, 0);
+	glRotated(frameNumber * (180.0/46), 0, 0, 1);
+
+	if(val==1) glColor3f(0.4f, 0.4f, 0.8f);
+    if(val==9) glColor3f(0.16f, 0.12f, 0.30f);
