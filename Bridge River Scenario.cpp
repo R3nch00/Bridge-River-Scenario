@@ -480,3 +480,36 @@ void hill(int val){
         glVertex2f(1.0f, 0.4f);
 
     glEnd();
+    glBegin(GL_POLYGON); 
+    
+    // Second lift of H I L L
+
+    if(val==1) glColor3f(0.0f, 0.5f, 0.0f);
+    if(val==9) glColor3f(0.04f, 0.29f, 0.02f);
+
+        glVertex2f(-0.6f, 0.4f);
+        glVertex2f(-0.4f, 0.55f);
+        glVertex2f(-0.2f, 0.6f);
+        glVertex2f(-0.15f, 0.55f);
+        glVertex2f(0.0f, 0.50f);
+        glVertex2f(0.15f, 0.53f);
+        glVertex2f(0.3f, 0.4f);
+
+    glEnd();
+}
+
+void hill3rd(int val){
+    
+    glBegin(GL_POLYGON); // Third H I L L 
+
+    if(val==1) glColor3f(0.0f, 0.5f, 0.0f);
+    if(val==9) glColor3f(0.04f, 0.29f, 0.02f);
+
+        glVertex2f(0.35f, 0.4f);
+        glVertex2f(0.45f, 0.5f);
+        glVertex2f(0.77f, 0.61f);
+        glVertex2f(.83f, 0.49f);
+        glVertex2f(1.0f, 0.4f);
+
+    glEnd();
+
