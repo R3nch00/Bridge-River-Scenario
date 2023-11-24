@@ -529,3 +529,23 @@ void hill3rd(int val){
 
     glEnd();
 }
+
+void sky(int val){ // C H A N G E C O L O R
+
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to BLACK and OPAQUE
+	glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
+    glBegin(GL_POLYGON);        // S K Y 
+
+    if(val==1){
+        glColor3ub(0,0,255);
+        glVertex2f(-1.0f, 1.0f);
+
+        glColor3ub(138, 105, 14);
+        glVertex2f( 1.0f, 1.0f);
+
+        glColor3ub(138, 67, 46);
+        glVertex2f( 1.0f, 0.5f);
+
+        glColor3ub(235, 158, 59);
+        glVertex2f(-1.0f, 0.5f);
+    }
