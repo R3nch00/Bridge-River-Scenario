@@ -672,3 +672,17 @@ void bridge(){
     glPopMatrix();
 
 }
+
+void lampPost_panelRoad(int val){
+    
+    // Main Panel
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.42f, 0.39f, 0.47f);
+
+        glVertex2f(-0.025f, 0.2f);
+        glVertex2f(0.025f, 0.2f);
+        glVertex2f(0.025f, -0.9f);
+        glVertex2f(-0.025f, -0.9f);
+
+    glEnd();
