@@ -638,3 +638,37 @@ void bridgeSupport(){ //Bridge Support
     glEnd();
 }
 
+void bridge(){
+    bridgeTop();
+    
+    glPushMatrix(); // Bridge Pillar Remove
+    glTranslatef(0.0f,0.005f,0.0f);
+    bridgeSupport();
+    bridgePillers();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.4f,-0.069f,0.0f);
+    bridgeSupport();
+    glTranslatef(0.0f,0.011f,0.0f);
+    glScaled(1,0.79,1);
+    bridgePillers();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.8f,-0.145f,0.0f);
+    bridgeSupport();
+    glTranslatef(0.0f,0.019f,0.0f);
+    glScaled(1,0.58,1);
+    bridgePillers();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(1.1994f,-0.22f,0.0f);
+    bridgeSupport();
+    glTranslatef(0.0f,0.026f,0.0f);
+    glScaled(1,0.38,1);
+    bridgePillers();
+    glPopMatrix();
+
+}
