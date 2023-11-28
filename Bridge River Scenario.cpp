@@ -597,5 +597,29 @@ void windmill(int val){ // Change Windmill
 	glTranslatef(0, 3, 0);
 	glRotated(frameNumber * (180.0/46), 0, 0, 1);
 
-	if(val==1) glColor3f(0.4f, 0.4f, 0.8f);
+    if(val==1) glColor3f(0.4f, 0.4f, 0.8f);
+	
     if(val==9) glColor3f(0.16f, 0.12f, 0.30f);
+    for (i = 0; i < 3; i++){	
+	glRotated(120, 0, 0, 1);
+        glBegin(GL_POLYGON);
+        glVertex2f(0,0);
+        glVertex2f(0.5f, 0.1f);
+        glVertex2f(1.5f,0);
+        glVertex2f(0.5f, -0.1f);
+        glEnd();
+   }
+}
+
+void bridgeTop(){ // T O P of Bridge
+    
+    glBegin(GL_POLYGON);
+    glColor3ub (150, 161, 177);
+    glVertex2f(0.60f, -0.10f);
+    glVertex2f(0.60f, -0.15f);
+    glColor3ub (70,87,112);
+    glVertex2f(-1.2f, 0.15f);
+    glVertex2f(-1.2f, 0.20f);
+    
+    glEnd();
+}
