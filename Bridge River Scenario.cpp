@@ -623,3 +623,18 @@ void bridgeTop(){ // T O P of Bridge
     
     glEnd();
 }
+
+void bridgeSupport(){ //Bridge Support
+    
+    glBegin(GL_POLYGON);
+    glColor3ub (70,87,112);
+    glVertex2f(-1.0f, 0.15f);
+    glVertex2f(-1.0f, 0.12f);
+    glVertex2f(-0.835f, 0.042f);
+    glVertex2f(-0.785f, 0.042f);
+    glVertex2f(-0.6f, 0.043f);
+    glVertex2f(-0.6f, 0.075f);
+    
+    glEnd();
+}
+
