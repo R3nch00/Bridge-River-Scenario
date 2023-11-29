@@ -807,3 +807,36 @@ void lampPost_panelRoad(int val){
         glEnd();
     }
 }
+
+// R I V E R
+
+void roadriver(int val){
+    glBegin(GL_POLYGON); 
+    
+    if(val==9)
+        glColor3f(0,0,128);
+        glVertex2f( 1.0f, -0.30f);
+
+        glColor3f(0,0,128);
+        glVertex2f(-1.0f, -0.30f);
+
+        glColor3f(0,0,128);
+        glVertex2f(-1.0f, 0.295f);
+
+        glColor3f(0,0,128);
+        glVertex2f( 1.0f, 0.295f);
+
+    if(val==1)
+        glColor3f(0,0,128);
+        glVertex2f( 1.0f, -0.30f);
+
+        glColor3f(0,0,128);
+        glVertex2f(-1.0f, -0.30f);
+
+        glColor3f(0,0,128);
+        glVertex2f(-1.0f, 0.295f);
+
+        glColor3f(0,0,128);
+        glVertex2f( 1.0f, 0.295f);
+
+    glEnd();
