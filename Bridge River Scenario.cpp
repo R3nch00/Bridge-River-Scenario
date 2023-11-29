@@ -878,3 +878,74 @@ void roadriver(int val){
         glVertex2f(-0.4f,- 0.57f);
     glEnd();
 }
+
+
+
+// T R E E
+
+void tree(){
+
+    glBegin(GL_POLYGON);
+        glColor3f(0.8f, 0.55f, 0.0f);
+        glVertex2f(-0.05f, -0.7f);
+
+        glColor3f(0.34f, 0.22f, 0.09f);
+        glVertex2f(0.05f, -0.7f);
+
+        glColor3f(0.34f, 0.22f, 0.09f);
+        glVertex2f(0.05f, -0.02f);
+
+        glColor3f(0.34f, 0.22f, 0.09f);
+        glVertex2f(-0.05f, -0.02f);
+        
+    glEnd();
+
+
+    glBegin(GL_TRIANGLES);
+        glColor3f(0.0f, 0.55f, 0.0f);
+        glVertex2f(-0.4f, -0.4f);
+
+        glColor3f(0.16f, 0.44f, 0.05f);
+        glVertex2f(0.4f, -0.4f);
+
+        glColor3f(0.27f, 0.44f, 0.03f);
+        glVertex2f(0.0f, -0.1f);
+        
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+        glColor3f(0.27f, 0.44f, 0.03f);
+        glVertex2f(-0.3f, -0.3f);
+
+        glColor3f(0.16f, 0.44f, 0.05f);
+        glVertex2f(0.3f, -0.3f);
+
+        glColor3f(0.0f, 0.55f, 0.0f);
+        glVertex2f(0.0f, 0.0f);
+        
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+        glColor3f(0.16f, 0.44f, 0.05f);
+        glVertex2f(-0.3f, -0.2f);
+
+        glColor3f(0.0f, 0.55f, 0.0f);
+        glVertex2f(0.3f, -0.2f);
+
+        glColor3f(0.27f, 0.44f, 0.03f);
+        glVertex2f(0.0f, 0.1f);
+        
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+        glColor3f(0.27f, 0.44f, 0.03f);
+        glVertex2f(-0.2f, -0.1f);
+
+        glColor3f(0.16f, 0.44f, 0.05f);
+        glVertex2f(0.2f, -0.1f);
+
+        glColor3f(0.0f, 0.55f, 0.0f);
+        glVertex2f(0.0f, 0.0f);
+        
+    glEnd();
+}
