@@ -1076,3 +1076,14 @@ void displayMor(){
     glFlush();
     glutTimerFunc(2500,automated_mor,0);
 }
+
+void info(){
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glBegin(GL_POLYGON);
+    
+    glEnd();
+
+    glFlush();
+}
