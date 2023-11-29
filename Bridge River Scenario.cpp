@@ -840,3 +840,41 @@ void roadriver(int val){
         glVertex2f( 1.0f, 0.295f);
 
     glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.30f, 0.50f, 0.35f);
+        glVertex2f(-1.0f, -0.35f);
+        glVertex2f( 1.0f, -0.35f);
+        glVertex2f( 1.0f, -0.30f);
+        glVertex2f(-1.0f, -0.30f);
+    glEnd();
+
+// R O A D
+
+    glBegin(GL_POLYGON); 
+    glColor3f(0.4f, 0.4f, 0.5f);
+
+        glVertex2f(-1.0f, -0.35f);
+        glVertex2f(1.0f, -0.35f);
+        glVertex2f(1.0f, -1.0f);
+        glVertex2f(-1.0f, -1.0f);
+    glEnd();
+
+    glBegin(GL_QUADS); //divider
+    glColor3f(1.0f, 1.0f, 1.0f);
+        glVertex2f(-0.3f,-0.63f);
+        glVertex2f( 0.3f, -0.63f);
+        glVertex2f( 0.35f, -0.57f);
+        glVertex2f(-0.25f,-0.57f);
+
+        glVertex2f( 0.4f, -0.63f);
+        glVertex2f( 1.0f, -0.63f);
+        glVertex2f( 1.0f, -0.57f);
+        glVertex2f( 0.45f,- 0.57f);
+
+        glVertex2f(-0.45f, -0.63f);
+        glVertex2f(-1.0f, -0.63f);
+        glVertex2f(-1.0f, -0.57f);
+        glVertex2f(-0.4f,- 0.57f);
+    glEnd();
+}
