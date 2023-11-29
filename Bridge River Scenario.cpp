@@ -1016,3 +1016,37 @@ void displayMor(){
     glScaled(1.8,1.5,1);
     boat(2); // 2nd Boat
     glPopMatrix();
+
+
+
+// Road Light
+
+    glPushMatrix(); // Lamp-Post
+    glLineWidth(1);
+    glTranslatef(0.7f,-0.08f,0.0f);
+	glScaled(0.3,0.3,1);
+	lampPost_panelRoad(val);
+    glPopMatrix();
+
+    glPushMatrix(); // Lamp-Post
+    glLineWidth(1);
+    glTranslatef(0.0f,-0.08f,0.0f);
+	glScaled(0.3,0.3,1);
+	lampPost_panelRoad(val);
+    glPopMatrix();
+
+    glPushMatrix(); // Lamp-Post
+    glLineWidth(1);
+    glTranslatef(-0.7f,-0.08f,0.0f);
+	glScaled(0.3,0.3,1);
+	lampPost_panelRoad(val);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-0.33f,0.14f,0.0f);
+    glScaled(0.4,0.7,1);
+    tree();
+    glTranslatef(1.73f,0.0f,0.0f);
+    tree();
+    glPopMatrix();
+
