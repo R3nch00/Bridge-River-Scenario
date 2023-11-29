@@ -1087,3 +1087,45 @@ void info(){
 
     glFlush();
 }
+
+void handleKeypress(unsigned char key, int x, int y){
+	switch (key){
+	    case 'x':
+	        
+        case 'X':
+            glutDisplayFunc(displayMor);
+            break;
+            
+        case '0':
+            speedBridgeCar1 = 0.0f;
+            truckSpeed = 0.0f;
+            carSpeed = 0.0f;
+            boatSpeed = 0.0f;
+            break;
+            
+        case '1':
+            speedBridgeCar1 = 0.20f;
+            break;
+            
+        case '2':
+            carSpeed = 0.05f;
+            break;
+            break;
+            
+        case '3':
+            truckSpeed = 0.05f;
+            break;
+            
+        case '4':
+            boatSpeed = 0.01f;
+            break;
+
+        case 'M':
+            
+        case 'm':
+            glutDisplayFunc(displayMor);
+            break;
+            
+        glutPostRedisplay();
+	}
+}
