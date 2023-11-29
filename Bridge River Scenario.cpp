@@ -949,3 +949,70 @@ void tree(){
         
     glEnd();
 }
+
+
+
+void displayMor(){
+    
+    int val = 1;
+
+    sky(val);
+    glLoadIdentity();
+    glPushMatrix();
+    glTranslatef(-0.37f,0.043f,0.0f);
+    glScaled(0.5,0.8,1);
+    sun(val);
+    glPopMatrix();
+    cloud(val);
+    glPushMatrix();
+    glTranslatef(0.0f,-0.15f,0.0f);
+    glScalef(1.0f,1.15f,0.0f);
+    hill(val);
+    glPopMatrix();
+
+	glPopMatrix();
+	glPushMatrix(); //3rd Windmill
+	glTranslated(-0.35,0.40,0);
+	glScaled(0.13,0.12,1);
+	windmill(val);
+	glPopMatrix();
+	glPushMatrix(); //4th Windmill
+	glTranslated(-0.60,0.31,0);
+	glScaled(0.13,0.15,1);
+	windmill(val);
+	glPopMatrix();
+
+	glPushMatrix();// B R I D G E
+    glTranslatef(-0.055f,0.55f,0.0f);
+	glScaled(1.4,0.9,1);
+	glRotated(50, 0,1,0);
+	bridge();
+    glPopMatrix();
+
+    glPushMatrix();//Bridge & Car 2
+    glTranslated(0,0.53,0);
+	glScaled(0.13,0.18,0);
+	glRotatef(-8,0.8f,0.0f,1.0f);
+    bridgeCar1(val);
+    glPopMatrix();
+
+    glPushMatrix(); // H I L L
+    glTranslatef(0.0f,-0.15f,0.0f);
+    glScaled(1,1.15,1);
+    hill3rd(val);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.741f,0.32f,0.0f);
+    glScaled(0.3,0.25,1);
+
+    glPopMatrix();
+
+    roadriver(val);
+
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(0.0f,0.40f,0.0f);
+    glScaled(1.8,1.5,1);
+    boat(2); // 2nd Boat
+    glPopMatrix();
