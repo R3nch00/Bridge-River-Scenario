@@ -1050,3 +1050,29 @@ void displayMor(){
     tree();
     glPopMatrix();
 
+//Vehicles On Road
+    
+    glPushMatrix();
+    glTranslatef(0.0f,0.80f,0.0f);
+    glScaled(1.5,1.4,1);
+    vehicleTruck(val);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.0f,0.30f,0.0f);
+    glScaled(1.5,1.2,1);
+    vehicleCar(val);
+    glPopMatrix();
+
+    if(rval == 1){
+        glPushMatrix();
+        glPointSize(2.0);
+        
+// rain();
+
+        glPopMatrix();
+    }
+
+    glFlush();
+    glutTimerFunc(2500,automated_mor,0);
+}
