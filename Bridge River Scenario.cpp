@@ -1129,3 +1129,24 @@ void handleKeypress(unsigned char key, int x, int y){
         glutPostRedisplay();
 	}
 }
+
+
+int main(int argc, char** argv){
+    glutInit(&argc, argv);
+    glutInitWindowSize(1600,900);
+    glutInitWindowPosition(150,80);
+    glutCreateWindow("Compute Graphics Final Term Project about Bridge River Scenario");
+    gluOrtho2D(-2, 2, -1, 1);
+    glutDisplayFunc(displayMor);
+    glutKeyboardFunc(handleKeypress);
+    glutTimerFunc(100, updateBridgeCar1, 0);
+    glutTimerFunc(100, updateBoat, 0);
+    glutTimerFunc(100, updateTruck, 0);
+    glutTimerFunc(100, updateCar, 0);
+    glutTimerFunc(200, cloud2, 0);
+    glutTimerFunc(200, doFrame,0);
+    initGL();
+    glutIdleFunc(Idle);
+    glutMainLoop();
+        return 0;
+}
